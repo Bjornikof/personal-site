@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+* {
+  font-family: Montserrat;
+}
+
+$montserrat: Montserrat;
+
+$pinkgray: #958787;
+$pinkred: #DC6565;
+$almostblack: #222222FF;
+$black: #000000FF;
+$white: #FFFFFFFF;
+$grayblack: #333333FF;
+$deeppinkpurple: rgba(53, 8, 26, 0.6);

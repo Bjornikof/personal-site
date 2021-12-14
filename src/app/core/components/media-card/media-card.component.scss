@@ -1,0 +1,59 @@
+@import "src/styles";
+
+.article figcaption {
+  position: absolute;
+}
+
+.article {
+  position: relative;
+}
+
+.article {
+  overflow: hidden;
+  width: 18em;
+  height: 18em;
+  margin: 1em;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    transition: 0.2s;
+  }
+
+  figcaption {
+    font-size: 14px;
+    text-shadow: 0 1px 0 $almostblack;
+    color: $white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 40px;
+    background: $deeppinkpurple;
+    opacity: 0;
+    transform: scale(1.15);
+    transition: 0.2s;
+
+    h3 {
+      color: $pinkred;
+      font-size: 16px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.article:hover img,
+.article:focus img,
+.article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+
+.article:hover figcaption,
+.article:focus figcaption,
+.article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
