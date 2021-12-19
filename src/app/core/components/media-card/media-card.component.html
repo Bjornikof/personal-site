@@ -3,5 +3,16 @@
   <figcaption>
     <h3>{{header}}</h3>
     <p>{{description}}</p>
+    <div class="link-div">
+      <div [ngClass]="{'link-icon': youtubeLink != '', 'link-icon-disable': youtubeLink == ''}" class="link-icon">
+        <a href="{{youtubeLink}}"><fa-icon [icon]="faYoutube"></fa-icon></a>
+      </div>
+      <div [ngClass]="{'link-icon': instagramLink != '', 'link-icon-disable': instagramLink == ''}" class="link-icon">
+        <a href="{{instagramLink}}"><fa-icon [icon]="faInstagram"></fa-icon></a>
+      </div>
+      <div [ngClass]="{'link-icon': deviantartLink != '', 'link-icon-disable': deviantartLink == ''}" class="link-icon">
+        <a href="{{deviantartLink}}"><fa-icon [icon]="faDeviantart"></fa-icon></a>
+      </div>
+    </div>
   </figcaption>
 </figure>

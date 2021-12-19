@@ -1,8 +1,11 @@
 <div class="media-container">
-  <div class="media-div" *ngFor="let galleryItem of galleryItems;">
+  <div *ngFor="let galleryItem of galleryItems;">
     <app-media-card [src]="galleryItem.payload.doc.data().media"
                     [header]="galleryItem.payload.doc.data().header"
-                    [description]="galleryItem.payload.doc.data().description">
+                    [description]="galleryItem.payload.doc.data().description"
+                    [instagramLink]="galleryItem.payload.doc.data().instagramLink"
+                    [deviantartLink]="galleryItem.payload.doc.data().deviantartLink"
+                    [youtubeLink]="galleryItem.payload.doc.data().youtubeLink">
 
     </app-media-card>
   </div>

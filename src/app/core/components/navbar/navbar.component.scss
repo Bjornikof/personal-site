@@ -7,10 +7,6 @@ html {
   box-sizing: border-box
 }
 
-body {
-  margin: 0;
-}
-
 a {
   color: $pinkgray;
   text-decoration: none;
@@ -19,11 +15,6 @@ a {
 p {
   margin: 0 0 45px 0;
   text-align: justify;
-}
-
-.header {
-  width: 80%;
-  display: inline-block;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -105,18 +96,17 @@ h1,h2,h3,h4,h5,h6 {
 
   .header {
     background-color: $white;
-    width: 80%;
+    width: 100%;
     z-index: 3;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding: 20px 0;
+    display: inline-block;
+    padding-bottom: 20px;
   }
 
   .header ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
     overflow: hidden;
+    margin: 0 0 0 auto;
+    padding-right: 40px;
     background-color: $white;
   }
 
@@ -140,6 +130,7 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding-left: 40px;
   }
 
   .logo-div:hover .logo{
@@ -239,7 +230,7 @@ h1,h2,h3,h4,h5,h6 {
 
   /* 48em = 768px */
 
-  @media (min-width: 875px) {
+  @media (min-width: 1300px) {
     .header li {
       float: left;
     }

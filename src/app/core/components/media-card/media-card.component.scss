@@ -10,9 +10,9 @@
 
 .article {
   overflow: hidden;
-  width: 18em;
-  height: 18em;
-  margin: 1em;
+  width: 20em;
+  height: 20em;
+  margin: 2em;
 
   img {
     width: 100%;
@@ -40,9 +40,36 @@
       margin-bottom: 0;
       font-weight: bold;
     }
+
+    .link-div {
+      margin-top: 7em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .link-icon {
+      color: $pinkred;
+      font-size: 20px;
+      transition: transform .2s;
+    }
+
+    .link-icon:hover {
+      color: $white;
+      transform: scale(1.1);
+    }
+
+    .link-icon-disable {
+      color: $pinkgray;
+      font-size: 20px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    a, a:visited, a:hover, a:active {
+      color: inherit;
+    }
   }
 }
-
 
 .article:hover img,
 .article:focus img,
