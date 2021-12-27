@@ -4,17 +4,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from "@angular/router";
 import { MediaCardComponent } from './components/media-card/media-card.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 
 @NgModule({
     declarations: [
         NavbarComponent,
-        MediaCardComponent
+        MediaCardComponent,
+        PaginationComponent
     ],
   exports: [
     NavbarComponent,
-    MediaCardComponent
+    MediaCardComponent,
+    PaginationComponent
   ],
     imports: [
         CommonModule,

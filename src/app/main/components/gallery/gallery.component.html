@@ -1,12 +1,12 @@
 <div class="media-container">
-  <div *ngFor="let galleryItem of galleryItems;">
-    <app-media-card [src]="galleryItem.payload.doc.data().media"
-                    [header]="galleryItem.payload.doc.data().header"
-                    [description]="galleryItem.payload.doc.data().description"
-                    [instagramLink]="galleryItem.payload.doc.data().instagramLink"
-                    [deviantartLink]="galleryItem.payload.doc.data().deviantartLink"
-                    [youtubeLink]="galleryItem.payload.doc.data().youtubeLink">
-
+  <div *ngFor="let galleryItem of tableData;">
+    <app-media-card [src]="galleryItem.media"
+                    [header]="galleryItem.header"
+                    [description]="galleryItem.description"
+                    [instagramLink]="galleryItem.instagramLink"
+                    [deviantartLink]="galleryItem.deviantartLink"
+                    [youtubeLink]="galleryItem.youtubeLink">
     </app-media-card>
   </div>
 </div>
+<app-pagination></app-pagination>
