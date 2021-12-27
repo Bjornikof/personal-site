@@ -1,14 +1,9 @@
 <div class="container">
   <div class="pagination p1">
     <ul>
-      <a (click)="example()"><li><</li></a>
-      <a class="is-active" href="#"><li>1</li></a>
-      <a href="#"><li>2</li></a>
-      <a href="#"><li>3</li></a>
-      <a href="#"><li>4</li></a>
-      <a href="#"><li>5</li></a>
-      <a href="#"><li>6</li></a>
-      <a (click)="example()"><li>></li></a>
+      <a (click)="prevPage($event)"><li class="arrow"><</li></a>
+      <a class="is-active">{{pageNumber}}</a>
+      <a (click)="nextPage($event)"><li class="arrow">></li></a>
     </ul>
   </div>
 </div>

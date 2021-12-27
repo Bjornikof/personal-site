@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FirestoreItemService} from "../../services/firestore-item.service";
+import {take} from "rxjs";
 
 @Component({
   selector: 'app-gallery',
@@ -10,6 +11,13 @@ export class GalleryComponent implements OnInit {
 
   pageSize: number = 8;
   firestoreCollection: string = 'galleryItems';
+  tableData: any[] = [];
+  firstInResponse: any = [];
+  lastInResponse: any = [];
+  prev_strt_at: any = [];
+  pagination_clicked_count = 0;
+  disable_next: boolean = false;
+  disable_prev: boolean = false;
 
   constructor(private firestoreItemService: FirestoreItemService) {
   }
@@ -18,49 +26,27 @@ export class GalleryComponent implements OnInit {
   this.getGalleryItems();
   }
 
-  //Data object for listing items
-  tableData: any[] = [];
-
-  //Save first document in snapshot of items received
-  firstInResponse: any = [];
-
-  //Save last document in snapshot of items received
-  lastInResponse: any = [];
-
-  //Keep the array of first document of previous pages
-  prev_strt_at: any = [];
-
-  //Maintain the count of clicks on Next Prev button
-  pagination_clicked_count = 0;
-
-  //Disable next and prev buttons
-  disable_next: boolean = false;
-  disable_prev: boolean = false;
-
   getGalleryItems() {
     return this.firestoreItemService.getItems(this.firestoreCollection, this.pageSize).snapshotChanges()
-      .subscribe(data => {
+      .pipe(take(1)).subscribe(data => {
 
       this.fillData(data);
 
-      //Initialize values
       this.prev_strt_at = [];
       this.pagination_clicked_count = 0;
       this.disable_next = false;
       this.disable_prev = false;
 
-      //Push first item to use for Previous action
       this.push_prev_startAt(this.firstInResponse);
     }, error => {
       console.log(error);
     });
   }
 
-  //Show previous set
   prevPage() {
     this.disable_prev = true;
     this.firestoreItemService.getPrevItems(this.firestoreCollection, this.pageSize, this.get_prev_startAt(), this.firstInResponse).snapshotChanges()
-      .subscribe(data => {
+      .pipe(take(1)).subscribe(data => {
 
         this.fillData(data);
 
@@ -82,7 +68,7 @@ export class GalleryComponent implements OnInit {
   nextPage() {
     this.disable_next = true;
     this.firestoreItemService.getNextItems(this.firestoreCollection, this.pageSize, this.lastInResponse).snapshotChanges()
-      .subscribe(data => {
+      .pipe(take(1)).subscribe(data => {
 
         if (!data.length) {
           this.disable_next = true;
@@ -102,12 +88,10 @@ export class GalleryComponent implements OnInit {
       });
   }
 
-  //Add document
   push_prev_startAt(prev_first_doc: any) {
     this.prev_strt_at.push(prev_first_doc);
   }
 
-  //Remove not required document
   pop_prev_startAt(prev_first_doc: any) {
     this.prev_strt_at.forEach((element: any) => {
       if (prev_first_doc.data().id == element.data().id) {
@@ -116,7 +100,6 @@ export class GalleryComponent implements OnInit {
     });
   }
 
-  //Return the Doc rem where previous page will startAt
   get_prev_startAt() {
     if (this.prev_strt_at.length > (this.pagination_clicked_count + 1))
       this.prev_strt_at.splice(this.prev_strt_at.length - 2, this.prev_strt_at.length - 1);

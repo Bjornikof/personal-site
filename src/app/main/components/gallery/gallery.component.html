@@ -9,4 +9,7 @@
     </app-media-card>
   </div>
 </div>
-<app-pagination></app-pagination>
+<app-pagination (nextEvent)="nextPage()"
+                (prevEvent)="prevPage()"
+                [pageNumber]="pagination_clicked_count+1">
+</app-pagination>

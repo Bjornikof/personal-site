@@ -6,6 +6,7 @@ a{
 
 li, a{
   font-size: 14px;
+  cursor: default;
 }
 
 .container{
@@ -44,5 +45,10 @@ li, a{
   background-color: $pinkred;
   border-radius: 100%;
   color: $white;
+}
+
+.arrow{
+  font-weight: bolder;
+  cursor: pointer;
 }
 
