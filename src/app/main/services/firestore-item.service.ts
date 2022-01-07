@@ -11,16 +11,16 @@ export class FirestoreItemService {
   }
 
   getItems(path: string, pageSize: number): AngularFirestoreCollection {
-    return this.firestore.collection(path,ref => ref.limit(pageSize));
+    return this.firestore.collection(path,ref => ref.orderBy('timestamp', 'desc').limit(pageSize));
   }
 
   getPrevItems(path: string, pageSize: number, startAt: any, endBefore: any): AngularFirestoreCollection {
     return this.firestore.collection(path,ref =>
-      ref.startAt(startAt).endBefore(endBefore).limit(pageSize));
+      ref.orderBy('timestamp', 'desc').limit(pageSize).startAt(startAt).endBefore(endBefore));
   }
 
   getNextItems(path: string, pageSize: number, startAt: any): AngularFirestoreCollection {
     return this.firestore.collection(path,ref =>
-      ref.limit(pageSize).startAfter(startAt));
+      ref.orderBy('timestamp', 'desc').limit(pageSize).startAfter(startAt));
   }
 }
