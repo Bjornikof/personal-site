@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { faDeviantart, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faDeviantart, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-media-card',

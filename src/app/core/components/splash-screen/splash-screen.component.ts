@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgxSpinnerService} from "ngx-spinner";
 
 @Component({
   selector: 'app-splash-screen',
@@ -9,7 +10,11 @@ export class SplashScreenComponent implements OnInit {
   windowWidth: string | undefined;
   showSplash = true;
 
+  constructor(private spinner: NgxSpinnerService) {
+  }
+
   ngOnInit(): void {
+    this.spinner.show();
     setTimeout(() => {
       this.windowWidth = "-" + window.innerWidth + "px";
 

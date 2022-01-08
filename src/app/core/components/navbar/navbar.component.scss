@@ -18,7 +18,6 @@ p {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: $montserrat;
   font-weight: 600;
   color: $pinkgray;
   margin: 30px 0 25px 0;
@@ -139,9 +138,13 @@ h1,h2,h3,h4,h5,h6 {
 
   .logo-text {
     font-weight: bold;
-    color: $pinkred;
+    background-image: linear-gradient(45deg, $pinkred, $pinkredsoft);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     float: left;
-    font-size: 2em;
+    font-size: 1.6em;
     padding: 2px 0px;
     text-decoration: none;
   }
@@ -151,7 +154,6 @@ h1,h2,h3,h4,h5,h6 {
     float: left;
     padding: 2px 0px;
     width: 4em;
-    length: 4em;
   }
 
   /* menu */

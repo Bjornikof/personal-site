@@ -18,6 +18,7 @@ export class GalleryComponent implements OnInit {
   pagination_clicked_count = 0;
   disable_next: boolean = false;
   disable_prev: boolean = false;
+  loading = true;
 
   constructor(private firestoreItemService: FirestoreItemService) {
   }
@@ -45,6 +46,9 @@ export class GalleryComponent implements OnInit {
 
   prevPage() {
     this.disable_prev = true;
+    if (this.pagination_clicked_count === 0) {
+      return;
+    }
     this.firestoreItemService.getPrevItems(this.firestoreCollection, this.pageSize, this.get_prev_startAt(), this.firstInResponse).snapshotChanges()
       .pipe(take(1)).subscribe(data => {
 
@@ -69,7 +73,6 @@ export class GalleryComponent implements OnInit {
     this.disable_next = true;
     this.firestoreItemService.getNextItems(this.firestoreCollection, this.pageSize, this.lastInResponse).snapshotChanges()
       .pipe(take(1)).subscribe(data => {
-
         if (!data.length) {
           this.disable_next = true;
           return;
