@@ -7,12 +7,14 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProjectsComponent,
-    GalleryComponent
+    GalleryComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,

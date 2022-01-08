@@ -9,10 +9,12 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import {SplashScreenComponent} from "./core/components/splash-screen/splash-screen/splash-screen.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,
