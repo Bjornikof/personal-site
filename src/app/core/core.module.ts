@@ -5,6 +5,8 @@ import { RouterModule } from "@angular/router";
 import { MediaCardComponent } from './components/media-card/media-card.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 
 
@@ -12,17 +14,19 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     declarations: [
         NavbarComponent,
         MediaCardComponent,
-        PaginationComponent
+        PaginationComponent,
+        SpinnerComponent
     ],
   exports: [
     NavbarComponent,
     MediaCardComponent,
     PaginationComponent
   ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        FontAwesomeModule
-    ]
+  imports: [
+    CommonModule,
+    RouterModule,
+    FontAwesomeModule,
+    NgxSpinnerModule
+  ]
 })
 export class CoreModule { }
