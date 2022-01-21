@@ -68,6 +68,30 @@
     a, a:visited, a:hover, a:active {
       color: inherit;
     }
+
+    .ribbon {
+      width: 10em;
+      height: 10em;
+      position: absolute;
+      top: -1em;
+      right: -1em;
+    }
+
+    .ribbon a {
+      position: absolute;
+      display: block;
+      width: 15em;
+      padding: 0.8em 0;
+      left: -2em;
+      top: 3em;
+      transform: rotate(45deg);
+      background-color: $pinkred;
+      box-shadow: 0 0.1em 0.4em $grayblack;
+      text-decoration: none;
+      color: $white;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 }
 

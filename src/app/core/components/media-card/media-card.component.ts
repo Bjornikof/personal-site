@@ -15,6 +15,8 @@ export class MediaCardComponent implements OnInit {
   @Input() instagramLink: string = '';
   @Input() deviantartLink: string = '';
 
+  @Input() saleLink: string = '';
+
   faYoutube = faYoutube;
   faInstagram = faInstagram;
   faDeviantart = faDeviantart;

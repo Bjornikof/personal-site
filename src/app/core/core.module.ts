@@ -1,26 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { RouterModule } from "@angular/router";
-import { MediaCardComponent } from './components/media-card/media-card.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {RouterModule} from "@angular/router";
+import {MediaCardComponent} from './components/media-card/media-card.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import { PaginationComponent } from './components/pagination/pagination.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import {PaginationComponent} from './components/pagination/pagination.component';
 import {NgxSpinnerModule} from "ngx-spinner";
-
+import {SplashScreenComponent} from "./components/splash-screen/splash-screen.component";
+import { PostCardComponent } from './components/post-card/post-card.component';
 
 
 @NgModule({
-    declarations: [
-        NavbarComponent,
-        MediaCardComponent,
-        PaginationComponent,
-        SpinnerComponent
-    ],
+  declarations: [
+    NavbarComponent,
+    MediaCardComponent,
+    PaginationComponent,
+    SplashScreenComponent,
+    PostCardComponent
+  ],
   exports: [
     NavbarComponent,
     MediaCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    SplashScreenComponent,
+    PostCardComponent
   ],
   imports: [
     CommonModule,
@@ -29,4 +32,5 @@ import {NgxSpinnerModule} from "ngx-spinner";
     NgxSpinnerModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}

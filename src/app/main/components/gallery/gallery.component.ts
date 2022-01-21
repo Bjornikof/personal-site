@@ -18,7 +18,6 @@ export class GalleryComponent implements OnInit {
   pagination_clicked_count = 0;
   disable_next: boolean = false;
   disable_prev: boolean = false;
-  loading = true;
 
   constructor(private firestoreItemService: FirestoreItemService) {
   }

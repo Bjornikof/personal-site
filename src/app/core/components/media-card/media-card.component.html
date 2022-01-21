@@ -14,5 +14,8 @@
         <a href="{{deviantartLink}}"><fa-icon [icon]="faDeviantart"></fa-icon></a>
       </div>
     </div>
+    <div *ngIf="saleLink" class="ribbon ribbon-top-right">
+      <a href="{{saleLink}}">BUY NOW!</a>
+    </div>
   </figcaption>
 </figure>
