@@ -11,6 +11,7 @@ export class PostCardComponent implements OnInit {
   @Input() header: string = '';
   @Input() displayText: string = '';
   @Input() mediumLink: string = '';
+  @Input() tags: string[] = ['',''];
 
   constructor() { }
 

@@ -1,7 +1,16 @@
-<div class="blog-card">
-  <img src='{{src}}' loading="lazy">
-  <div class="text-overlay">
-    <h2>{{header}}</h2>
-    <p>{{displayText}}<a href="{{mediumLink}}" class="read-more">Read More</a></p>
-  </div>
-</div>
+<mat-card class="post-card">
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip selected>
+      {{tags[0]}}
+    </mat-chip>
+    <mat-chip selected>
+      {{tags[1]}}
+    </mat-chip>
+  </mat-chip-list>
+  <img mat-card-image src="{{src}}" alt="Post Image">
+  <mat-card-header>
+    <mat-card-title>{{header}}</mat-card-title>
+    <mat-card-subtitle>{{displayText}}</mat-card-subtitle>
+  </mat-card-header>
+  <button mat-flat-button>Read More</button>
+</mat-card>

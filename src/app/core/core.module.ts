@@ -8,6 +8,9 @@ import {PaginationComponent} from './components/pagination/pagination.component'
 import {NgxSpinnerModule} from "ngx-spinner";
 import {SplashScreenComponent} from "./components/splash-screen/splash-screen.component";
 import { PostCardComponent } from './components/post-card/post-card.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatChipsModule} from "@angular/material/chips";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { PostCardComponent } from './components/post-card/post-card.component';
     CommonModule,
     RouterModule,
     FontAwesomeModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatCardModule,
+    MatChipsModule,
+    MatButtonModule
   ]
 })
 export class CoreModule {
