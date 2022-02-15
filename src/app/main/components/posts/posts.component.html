@@ -1,15 +1,17 @@
-<div class="media-container">
-  <div *ngFor="let postItem of tableData;">
-    <app-post-card [src]="postItem.media"
-                   [header]="postItem.header"
-                   [displayText]="postItem.displayText"
-                   [mediumLink]="postItem.mediumLink"
-                   [tags]="postItem.tags">
-    </app-post-card>
+<div class="wrapper">
+  <div class="media-container">
+    <div *ngFor="let postItem of tableData;">
+      <app-post-card [src]="postItem.media"
+                     [header]="postItem.header"
+                     [displayText]="postItem.displayText"
+                     [mediumLink]="postItem.mediumLink"
+                     [tags]="postItem.tags">
+      </app-post-card>
+    </div>
   </div>
+  <app-pagination class="pagination"
+                  (nextEvent)="nextPage()"
+                  (prevEvent)="prevPage()"
+                  [pageNumber]="pagination_clicked_count+1">
+  </app-pagination>
 </div>
-<app-pagination
-                (nextEvent)="nextPage()"
-                (prevEvent)="prevPage()"
-                [pageNumber]="pagination_clicked_count+1">
-</app-pagination>

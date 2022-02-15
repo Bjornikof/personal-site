@@ -1,16 +1,19 @@
-<div class="media-container">
-  <div *ngFor="let galleryItem of tableData;">
-    <app-media-card [src]="galleryItem.media"
-                    [header]="galleryItem.header"
-                    [description]="galleryItem.description"
-                    [instagramLink]="galleryItem.instagramLink"
-                    [deviantartLink]="galleryItem.deviantartLink"
-                    [youtubeLink]="galleryItem.youtubeLink"
-                    [saleLink]="galleryItem.saleLink">
-    </app-media-card>
+<div class="wrapper">
+  <div class="media-container">
+    <div *ngFor="let galleryItem of tableData;">
+      <app-media-card [src]="galleryItem.media"
+                      [header]="galleryItem.header"
+                      [description]="galleryItem.description"
+                      [instagramLink]="galleryItem.instagramLink"
+                      [deviantartLink]="galleryItem.deviantartLink"
+                      [youtubeLink]="galleryItem.youtubeLink"
+                      [saleLink]="galleryItem.saleLink">
+      </app-media-card>
+    </div>
   </div>
+  <app-pagination class="pagination"
+                  (nextEvent)="nextPage()"
+                  (prevEvent)="prevPage()"
+                  [pageNumber]="pagination_clicked_count+1">
+  </app-pagination>
 </div>
-<app-pagination (nextEvent)="nextPage()"
-                (prevEvent)="prevPage()"
-                [pageNumber]="pagination_clicked_count+1">
-</app-pagination>
