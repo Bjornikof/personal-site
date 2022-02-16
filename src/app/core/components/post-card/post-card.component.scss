@@ -1,8 +1,9 @@
 @import "src/styles";
 
 .post-card{
-  width: 30em;
+  max-width: 30em;
   height: 35em;
+  min-width: 15em;
   margin: 1em;
   overflow: hidden;
   display: flex;
