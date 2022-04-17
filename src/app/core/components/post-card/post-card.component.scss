@@ -9,29 +9,29 @@
   display: flex;
   flex-direction: column;
 
-  img {
-    height: 60%;
-    object-fit: contain;
+  ngx-picture {
+    width: 100%;
+    height: auto;
   }
 }
 
 .mat-card-header{
-  color: $pinkred !important;
+  color: $maincolor !important;
 }
 
 .mat-card-subtitle{
-  color: $pinkgray !important;
+  color: $graycolor !important;
 }
 
 .mat-chip{
-  background-color: $pinkred !important;
+  background-color: $maincolor !important;
 }
 .mat-chip.mat-standard-chip::after {
   background: none !important;
 }
 
 .mat-flat-button{
-  background-color: $pinkred !important;
+  background-color: $maincolor !important;
   color: $white !important;
   display: block;
   margin: auto;

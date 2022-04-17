@@ -10,12 +10,12 @@
 
 .article {
   overflow: hidden;
-  width: 19em;
-  height: 19em;
+  width: 20em;
+  height: 20em;
 
-  img {
+  ngx-picture {
     width: 100%;
-    min-height: 100%;
+    height: auto;
     transition: 0.2s;
   }
 
@@ -28,13 +28,13 @@
     top: 0;
     bottom: 0;
     padding: 40px;
-    background: $deeppinkpurple;
+    background: $mainshadowcolor;
     opacity: 0;
     transform: scale(1.15);
     transition: 0.2s;
 
     h3 {
-      color: $pinkred;
+      color: $maincolor;
       font-size: 16px;
       margin-bottom: 0;
       font-weight: bold;
@@ -47,7 +47,7 @@
     }
 
     .link-icon {
-      color: $pinkred;
+      color: $maincolor;
       font-size: 20px;
       transition: transform .2s;
     }
@@ -58,7 +58,7 @@
     }
 
     .link-icon-disable {
-      color: $pinkgray;
+      color: $graycolor;
       font-size: 20px;
       opacity: 0.6;
       pointer-events: none;
@@ -84,7 +84,7 @@
       left: -2em;
       top: 3em;
       transform: rotate(45deg);
-      background-color: $pinkred;
+      background-color: $maincolor;
       box-shadow: 0 0.1em 0.4em $grayblack;
       text-decoration: none;
       color: $white;
@@ -94,9 +94,9 @@
   }
 }
 
-.article:hover img,
-.article:focus img,
-.article:active img {
+.article:hover ngx-picture,
+.article:focus ngx-picture,
+.article:active ngx-picture {
   filter: blur(3px);
   transform: scale(0.97);
 }

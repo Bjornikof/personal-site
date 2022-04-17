@@ -7,7 +7,7 @@
       {{tags[1]}}
     </mat-chip>
   </mat-chip-list>
-  <img mat-card-image src="{{src}}" alt="Post Image">
+  <ngx-picture mat-card-image src="{{src}}" alt="Post Image" [lazyLoad]="false"></ngx-picture>
   <mat-card-header>
     <mat-card-title>{{header}}</mat-card-title>
     <mat-card-subtitle>{{displayText}}</mat-card-subtitle>

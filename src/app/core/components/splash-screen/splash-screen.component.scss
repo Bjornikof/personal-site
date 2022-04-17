@@ -1,7 +1,7 @@
 @import "../../../../styles";
 
 .app-splash-screen {
-  background-color: $pinkred;
+  background-color: $maincolor;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,10 +25,10 @@
 
 .app-logo {
   max-width: 100%;
-  background: url("../../../../assets/icons/personal_avatar_open.ico") no-repeat center;
+  background: url("../../../../assets/icons/personal_avatar_smile.ico") no-repeat center;
   background-size: contain;
-  width: 10em;
-  height: 10em;
+  width: 9em;
+  height: 9em;
 }
 
 .spinner {

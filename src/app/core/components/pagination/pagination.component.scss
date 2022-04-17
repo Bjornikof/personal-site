@@ -10,15 +10,8 @@ li, a{
 }
 
 .container{
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  position: relative;
+  min-height: 10vh;
   text-align: center;
-}
-
-.pagination{
-  padding: 30px 0;
 }
 
 .pagination ul{
@@ -29,8 +22,7 @@ li, a{
 
 .pagination a{
   display: inline-block;
-  padding: 10px 18px;
-  color: $pinkgray;
+  color: $graycolor;
 }
 
 .p1 a{
@@ -42,7 +34,7 @@ li, a{
 }
 
 .p1 a.is-active{
-  background-color: $pinkred;
+  background-color: $maincolor;
   border-radius: 100%;
   color: $white;
 }

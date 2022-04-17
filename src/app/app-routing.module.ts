@@ -4,6 +4,8 @@ import {HomeComponent} from "./main/components/home/home.component";
 import {ProjectsComponent} from "./main/components/projects/projects.component";
 import {GalleryComponent} from "./main/components/gallery/gallery.component";
 import {PostsComponent} from "./main/components/posts/posts.component";
+import {AboutComponent} from "./main/components/about/about.component";
+import {ContactComponent} from "./main/components/contact/contact.component";
 
 const routes: Routes = [
   {
@@ -22,6 +24,12 @@ const routes: Routes = [
   },
   {
     path: 'posts', component: PostsComponent
+  },
+  {
+    path: 'about', component: AboutComponent
+  },
+  {
+    path: 'contact', component: ContactComponent
   }
 ];
 

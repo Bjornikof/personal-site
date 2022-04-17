@@ -1,17 +1,39 @@
-<header class="header">
-  <div class="logo-container">
-    <div class="logo-div" routerLink="home">
-      <img class="logo">
-      <a class="logo-text">Dilara Ünbay</a>
+<div class="container">
+  <mat-toolbar class="fixed">
+    <div class="logo-container">
+      <div class="logo-div" routerLink="home">
+        <ngx-picture class="logo"></ngx-picture>
+        <a class="logo-text">Dilara Ünbay</a>
+      </div>
     </div>
-  </div>
-  <input class="menu-btn" type="checkbox" id="menu-btn"/>
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  <ul class="menu">
-    <li><a class="link link-theme link-arrow" routerLink="posts">POSTS</a></li>
-    <li><a class="link link-theme link-arrow" routerLink="projects">PROJECTS</a></li>
-    <li><a class="link link-theme link-arrow" routerLink="gallery">GALLERY</a></li>
-    <li><a class="link link-theme link-arrow">ABOUT ME</a></li>
-    <li><a class="link link-theme link-arrow">CONTACT ME</a></li>
-  </ul>
-</header>
+    <div fxShow="true" fxHide.lt-lg="true" class="menu-spacer">
+      <a mat-button routerLink="posts">POSTS</a>
+      <a mat-button routerLink="projects">PROJECTS</a>
+      <a mat-button routerLink="gallery">GALLERY</a>
+      <a mat-button routerLink="about">ABOUT ME</a>
+      <a mat-button routerLink="contact">CONTACT ME</a>
+    </div>
+
+    <div fxShow="true" fxHide.gt-md="true" class="menu-spacer">
+      <button mat-button (click)="sidenav.toggle()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill [hidden]="!this.opened" fxHide.gt-md="true" class="fixed-container">
+  <mat-sidenav #sidenav position="end" fxLayout="column">
+
+    <div fxLayout="column" class="sidenav-content">
+
+      <a mat-button routerLink="posts">POSTS</a>
+      <a mat-button routerLink="projects">PROJECTS</a>
+      <a mat-button routerLink="gallery">GALLERY</a>
+      <a mat-button routerLink="about">ABOUT ME</a>
+      <a mat-button routerLink="contact">CONTACT ME</a>
+
+    </div>
+
+  </mat-sidenav>
+  </mat-sidenav-container>
+</div>

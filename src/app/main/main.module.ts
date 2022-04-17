@@ -8,13 +8,17 @@ import {AngularFireModule} from "@angular/fire/compat";
 import {environment} from "../../environments/environment";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import { PostsComponent } from './components/posts/posts.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProjectsComponent,
     GalleryComponent,
-    PostsComponent
+    PostsComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

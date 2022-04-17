@@ -11,6 +11,11 @@ import { PostCardComponent } from './components/post-card/post-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatButtonModule} from "@angular/material/button";
+import { CLOUDINARY_CONFIG, NgxPictureModule } from "ngx-picture";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import {MatButtonModule} from "@angular/material/button";
     NgxSpinnerModule,
     MatCardModule,
     MatChipsModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatSidenavModule
   ]
 })
 export class CoreModule {
