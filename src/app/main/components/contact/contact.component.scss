@@ -18,7 +18,7 @@
 
 @media (max-width: 60em) {
   .contact-card {
-    width: 27em;
+    width: fit-content;
     height: fit-content;
     margin: 1em;
     overflow: hidden;
@@ -48,9 +48,9 @@
 
 }
 
-@media (max-width: 60em) {
+@media (max-width: 40em) {
   .message-section {
-    width: 27em;
+    width: fit-content;
     padding-left: 0;
   }
 }
@@ -70,9 +70,9 @@
   }
 }
 
-@media (max-width: 60em) {
+@media (max-width: 40em) {
   .information-section {
-    width: 27em;
+    width: fit-content;
     padding-left: 0;
   }
 }
