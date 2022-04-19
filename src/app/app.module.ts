@@ -10,7 +10,8 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {NgxSpinnerModule} from "ngx-spinner";
+import {HttpClientModule} from "@angular/common/http";
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -22,12 +23,14 @@ import {NgxSpinnerModule} from "ngx-spinner";
     CoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    NgxSpinnerModule
+    provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500}}
+  ],
   exports: [
   ],
   bootstrap: [AppComponent]

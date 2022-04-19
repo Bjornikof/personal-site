@@ -1,6 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
+
+$personal-site-primary: mat.define-palette(mat.$light-blue-palette);
+$personal-site-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
+
+$personal-site-warn: mat.define-palette(mat.$red-palette);
+
+$personal-site-theme: mat.define-light-theme((
+  color: (
+    primary: $personal-site-primary,
+    accent: $personal-site-accent,
+    warn: $personal-site-warn,
+  )
+));
+
+@include mat.all-component-themes($personal-site-theme);
+
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 * {
   font-family: Montserrat, serif;
 }
@@ -14,7 +30,9 @@ $almostblack: #222222FF;
 $black: #000000FF;
 $white: #FFFFFFFF;
 $grayblack: #333333FF;
+$backgroundcolor: #171B2AFF;
 $mainshadowcolor: rgba(8, 28, 53, 0.6);
 $transparentblack: rgba(0,0,0,0.8);
+$transparentgraycolor: rgb(157, 159, 161, 0.5);
 
-body { margin: 0; font-family: Montserrat, serif; }
+body { margin: 0; font-family: Montserrat, serif; background-color: $backgroundcolor;}

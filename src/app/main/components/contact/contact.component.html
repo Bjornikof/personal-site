@@ -1,3 +1,67 @@
 <div class="wrapper">
-  <p>Contact is under construction</p>
+  <mat-card class="contact-card mat-elevation-z4">
+    <div class="message-section">
+
+      <mat-card-header fxLayoutAlign="center">SEND ME A MESSAGE 🖤</mat-card-header>
+      <form [formGroup]="messageForm" fxLayout="column">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="fullName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>How may I help you?</mat-label>
+          <textarea matInput
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="10"
+                    formControlName="message"></textarea>
+        </mat-form-field>
+
+        <div fxLayoutAlign="center">
+          <button mat-raised-button color="accent" (click)="sendEmail()">
+            <fa-icon [icon]="faPaperPlane"></fa-icon>
+            <span class="submit-button">SUBMIT</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <mat-divider class="section-divider" [vertical]="true"></mat-divider>
+
+    <div class="information-section" fxLayout="column" fxLayoutAlign="space-evenly center">
+
+      <iframe class="map-location" width="400" height="300" frameBorder="0"
+              src="https://maps.google.com/maps?q=34912&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+      <div fxLayout="column">
+
+        <mat-card-subtitle>CONTACT ME ELSEWHERE</mat-card-subtitle>
+
+        <div class="line"></div>
+
+        <div class="fab-links" fxLayout="row">
+          <button mat-mini-fab color="accent" (click)="openLink(0)">
+            <fa-icon class="icon" [icon]="faLinkedin"></fa-icon>
+          </button>
+          <button mat-mini-fab color="accent" (click)="openLink(1)">
+            <fa-icon class="icon" [icon]="faInstagram"></fa-icon>
+          </button>
+          <button mat-mini-fab color="accent" (click)="openLink(3)">
+            <fa-icon class="icon" [icon]="faWhatsapp"></fa-icon>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </mat-card>
 </div>
