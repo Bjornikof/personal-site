@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HomeComponent} from "./components/home/home.component";
 import {CoreModule} from "../core/core.module";
 import {ProjectsComponent} from "./components/projects/projects.component";
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -22,7 +21,6 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
-    HomeComponent,
     ProjectsComponent,
     GalleryComponent,
     PostsComponent,
@@ -45,7 +43,6 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatSnackBarModule
   ],
   exports: [
-    HomeComponent,
     ProjectsComponent
   ]
 })
