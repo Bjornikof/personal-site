@@ -1,6 +1,19 @@
+@import "src/styles";
+
 .wrapper {
   display: flex;
   flex-direction: column;
   padding: 100px;
   height: 100%;
+}
+
+.slider{
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+h1{
+  color: $white;
+  text-align: center;
 }

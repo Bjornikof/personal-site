@@ -16,6 +16,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {ImageSliderComponent} from "./components/image-slider/image-slider.component";
+import {NgImageSliderModule} from "ng-image-slider";
 
 
 @NgModule({
@@ -24,14 +26,16 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MediaCardComponent,
     PaginationComponent,
     SplashScreenComponent,
-    PostCardComponent
+    PostCardComponent,
+    ImageSliderComponent
   ],
   exports: [
     NavbarComponent,
     MediaCardComponent,
     PaginationComponent,
     SplashScreenComponent,
-    PostCardComponent
+    PostCardComponent,
+    ImageSliderComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +49,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatToolbarModule,
     MatIconModule,
     FlexLayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+    NgImageSliderModule
   ]
 })
 export class CoreModule {

@@ -10,8 +10,11 @@ export class FirestoreItemService {
   constructor(private firestore: AngularFirestore) {
   }
 
-  getItems(path: string, pageSize: number): AngularFirestoreCollection {
-    return this.firestore.collection(path,ref => ref.orderBy('timestamp', 'desc').limit(pageSize));
+  getItems(path: string, pageSize?: number): AngularFirestoreCollection {
+    if (pageSize) {
+      return this.firestore.collection(path, ref => ref.orderBy('timestamp', 'desc').limit(pageSize));
+    }
+    return this.firestore.collection(path,ref => ref.orderBy('timestamp', 'desc'));
   }
 
   getPrevItems(path: string, pageSize: number, startAt: any, endBefore: any): AngularFirestoreCollection {
