@@ -25,6 +25,8 @@
     "@fortawesome/angular-fontawesome": "^0.10.2",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/fontawesome-common-types": "^0.2.36",
     "firebase": "^9.4.0",
     "ng-image-slider": "^2.8.0",
     "ngx-picture": "^2.0.16",

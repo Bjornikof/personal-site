@@ -13,6 +13,5 @@ export class ImageSliderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.certificationItems);
   }
 }
