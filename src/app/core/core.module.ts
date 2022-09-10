@@ -18,6 +18,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {ImageSliderComponent} from "./components/image-slider/image-slider.component";
 import {NgImageSliderModule} from "ng-image-slider";
+import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
+import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import {NgImageSliderModule} from "ng-image-slider";
     PaginationComponent,
     SplashScreenComponent,
     PostCardComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    SkeletonLoaderComponent
   ],
   exports: [
     NavbarComponent,
@@ -50,7 +53,8 @@ import {NgImageSliderModule} from "ng-image-slider";
     MatIconModule,
     FlexLayoutModule,
     MatSidenavModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    NgxSkeletonLoaderModule
   ]
 })
 export class CoreModule {

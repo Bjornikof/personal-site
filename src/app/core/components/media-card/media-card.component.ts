@@ -14,17 +14,22 @@ export class MediaCardComponent implements OnInit {
   @Input() youtubeLink: string = '';
   @Input() instagramLink: string = '';
   @Input() deviantartLink: string = '';
-
   @Input() saleLink: string = '';
 
   faYoutube = faYoutube;
   faInstagram = faInstagram;
   faDeviantart = faDeviantart;
 
+  imageLoading = true;
+
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  onLoad(state: boolean) {
+    this.imageLoading = state;
   }
 
 }

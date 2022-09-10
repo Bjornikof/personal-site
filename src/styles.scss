@@ -27,6 +27,7 @@ $squada: 'Squada One', serif;
 $graycolor: #878E95FF;
 $maincolor: #489DC0FF;
 $secondmaincolor: #19557EFF;
+$skeletoncolor: #24364F;
 $almostblack: #222222FF;
 $black: #000000FF;
 $white: #FFFFFFFF;
@@ -56,6 +57,14 @@ a.prev.icons.prev-icon.disable.ng-star-inserted, a.next.icons.next-icon.disable.
 
 img.image.ng-star-inserted {
   z-index: -1 !important;
+}
+
+span.skeleton-loader.progress-dark.ng-star-inserted {
+  background-color: $skeletoncolor !important;
+}
+
+span.skeleton-loader.pulse.ng-star-inserted {
+  background-color: $skeletoncolor !important;
 }
 
 body {

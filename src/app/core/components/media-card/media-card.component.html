@@ -1,5 +1,6 @@
 <figure class="article">
-  <ngx-picture src="{{src}}" alt="Media Card Picture" [lazyLoad]="false"></ngx-picture>
+  <ngx-picture src="{{src}}" alt="Media Card Picture" [lazyLoad]="true" (loaded)="onLoad(false)"></ngx-picture>
+  <app-skeleton-loader *ngIf="imageLoading" [theme]="{height: '20em', width: '20em'}"></app-skeleton-loader>
   <figcaption>
     <h3>{{header}}</h3>
     <p>{{description}}</p>
