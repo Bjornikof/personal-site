@@ -18,6 +18,7 @@ import {FlexModule} from "@angular/flex-layout";
 import {MatButtonModule} from "@angular/material/button";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -27,21 +28,22 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     AboutComponent,
     ContactComponent
   ],
-  imports: [
-    CommonModule,
-    CoreModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    MatCardModule,
-    MatDividerModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FlexModule,
-    MatButtonModule,
-    FontAwesomeModule,
-    MatSnackBarModule
-  ],
+    imports: [
+        CommonModule,
+        CoreModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        MatCardModule,
+        MatDividerModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FlexModule,
+        MatButtonModule,
+        FontAwesomeModule,
+        MatSnackBarModule,
+        MatChipsModule
+    ],
   exports: [
     ProjectsComponent
   ]

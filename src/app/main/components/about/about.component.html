@@ -1,4 +1,38 @@
 <div class="wrapper">
+
+  <mat-card class="about-card mat-elevation-z4">
+
+    <div class="content-section">
+      <div class="left-side">
+        <img class="framed-image" src="assets/pictures/dilara_unbay.JPG" alt="Dilara Ünbay">
+        <button mat-raised-button (click)="downloadCV()">
+          <fa-icon [icon]="faFileDownload"></fa-icon>
+          <span class="download-button">CV</span>
+        </button>
+      </div>
+      <mat-divider class="section-divider" [vertical]="true"></mat-divider>
+      <div class="right-side">
+        <mat-card-header>
+          Who is Dilara Ünbay?
+        </mat-card-header>
+        <mat-card-content>
+          idkidk
+        </mat-card-content>
+      </div>
+    </div>
+
+    <mat-card-content>
+    </mat-card-content>
+
+    <mat-card-footer fxLayout="column" fxLayoutAlign="start">
+      <mat-card-header>SKILLS</mat-card-header>
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip selected *ngFor="let skill of skillSet">{{skill}}</mat-chip>
+      </mat-chip-list>
+    </mat-card-footer>
+
+  </mat-card>
+
   <div class="slider">
     <h1>Certifications</h1>
     <app-image-slider [certificationItems]="tableData"></app-image-slider>

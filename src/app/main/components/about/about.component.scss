@@ -7,14 +7,156 @@
   height: 100%;
 }
 
-.slider{
+/* Image Slider */
+.slider {
   width: 90%;
   justify-self: center;
   align-self: center;
   min-width: 340px;
 }
 
-h1{
+h1 {
   color: $white;
   text-align: center;
+}
+
+/* Card */
+.about-card {
+  width: 108em;
+  height: 30em;
+  margin: 1em;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (max-width: 108em) {
+  .about-card {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.mat-card-header {
+  flex-shrink: 0;
+}
+
+.mat-card-content {
+  flex-grow: 1;
+}
+
+.section-divider {
+  margin-top: 1em;
+}
+
+@media (max-width: 60em) {
+  .section-divider {
+    visibility: hidden;
+    padding: 1em;
+  }
+}
+
+.mat-card-footer {
+
+  .mat-card-header {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: $secondmaincolor;
+  }
+
+  width: 100%;
+  padding: 1em;
+  margin: auto;
+  background-color: $transparentlightgraycolor;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 60em) {
+  .content-section {
+    flex-direction: column;
+  }
+}
+
+.left-side {
+  width: 30%;
+  padding-left: 1em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 60em) {
+  .left-side {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.right-side {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .mat-card-header {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 1em;
+    text-align: center;
+    padding-right: 1em;
+    color: $secondmaincolor;
+  }
+
+  .mat-card-content {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+@media (max-width: 60em) {
+  .right-side {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+
+.framed-image {
+  width: 14em;
+  height: 14em;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, $maincolor, $secondmaincolor);
+  padding: 5px;
+}
+
+.mat-chip {
+  background-color: $maincolor !important;
+}
+
+.mat-chip.mat-standard-chip::after {
+  background: none !important;
+}
+
+.download-button {
+  padding-left: 7px;
+}
+
+.mat-raised-button {
+  background-color: $maincolor;
+  color: $white;
+  width: 5em;
+  font-size: 15px;
+  margin-top: 1em;
 }
