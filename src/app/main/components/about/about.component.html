@@ -5,19 +5,38 @@
     <div class="content-section">
       <div class="left-side">
         <img class="framed-image" src="assets/pictures/dilara_unbay.JPG" alt="Dilara Ünbay">
-        <button mat-raised-button (click)="downloadCV()">
+        <button mat-raised-button (click)="downloadCV()" label="View & Download CV">
           <fa-icon [icon]="faFileDownload"></fa-icon>
           <span class="download-button">CV</span>
         </button>
       </div>
       <mat-divider class="section-divider" [vertical]="true"></mat-divider>
       <div class="right-side">
-        <mat-card-header>
-          Who is Dilara Ünbay?
-        </mat-card-header>
+        <mat-card-title>
+          Hi, I'm Dilara Ünbay 🖤
+        </mat-card-title>
         <mat-card-content>
-          idkidk
+          I'm a Front-End Developer who has a year of back end experience up their sleeve. Lately, I have a strong
+          interest in UI/UX design and I'm in the midst of sharpening my skills. I'm currently working in
+          Istanbul. However, I'm greatly in favor of working abroad even if it requires a relocation. I feel like as a
+          creative person I have a lot of hobbies to keep me entertained in my spare time. I enjoy playing
+          multiplayer games, drawing, painting, going to the theater, trying out food, exploring different cultures,
+          translating subtitles and expanding my anime/manga collection. Feel free to contact me or download my CV to learn more about me.
         </mat-card-content>
+        <div class="detail-row" fxLayout="row" fxLayoutAlign="space-around center">
+          <div class="detail-column" fxLayout="column" fxLayoutAlign="space-around center">
+            <span>Born in</span>
+            <span>Smolensk, RU</span>
+          </div>
+          <div class="detail-column" fxLayout="column" fxLayoutAlign="space-around center">
+            <span>Experience</span>
+            <span>+2 Years</span>
+          </div>
+          <div class="detail-column" fxLayout="column" fxLayoutAlign="space-around center">
+            <span>Date of Birth</span>
+            <span>12 March 1998</span>
+          </div>
+        </div>
       </div>
     </div>
 

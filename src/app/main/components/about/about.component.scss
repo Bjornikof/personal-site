@@ -110,7 +110,7 @@ h1 {
   align-items: center;
   flex-direction: column;
 
-  .mat-card-header {
+  .mat-card-title {
     margin-bottom: 0.5em;
     font-weight: bold;
     font-size: 25px;
@@ -122,16 +122,18 @@ h1 {
 
   .mat-card-content {
     text-align: center;
-    font-size: 20px;
+    line-height: 1.5em;
+    padding: 1em;
+    font-size: 18px;
   }
 }
+
 @media (max-width: 60em) {
   .right-side {
     width: 100%;
     padding-top: 0;
   }
 }
-
 
 .framed-image {
   width: 14em;
@@ -159,4 +161,15 @@ h1 {
   width: 5em;
   font-size: 15px;
   margin-top: 1em;
+}
+
+.detail-row {
+  width: 100%;
+}
+
+.detail-column {
+  span:last-of-type {
+    color: $secondmaincolor;
+    font-weight: bold;
+  }
 }

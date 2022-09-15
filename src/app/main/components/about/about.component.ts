@@ -14,8 +14,9 @@ export class AboutComponent implements OnInit {
 
   firestoreCollection: string = 'certificationItems';
   tableData: any[] = [];
-  skillSet: string[] = ["UI/UX", "Front End Development", "Software Development", "Web Development", "Angular", "HTML", "CSS",
-    "TypeScript", "JavaScript", "Camunda", "REST", "API", "Java", "Spring Boot", "English", "Russian", "Turkish"];
+  skillSet: string[] = ["UI/UX", "Front End Development", "Software Development", "Web Development", "Angular",
+    "TypeScript", "JavaScript", "HTML", "CSS", "SCSS", "Angular Material", "VueJS", "Vuetify", "Camunda", "REST",
+    "API", "Java", "Spring Boot", "English", "Russian", "Turkish"];
 
   constructor(private firestoreItemService: FirestoreItemService) {
   }
@@ -30,14 +31,13 @@ export class AboutComponent implements OnInit {
         for (let item of data) {
           this.tableData.push(item.payload.doc.data());
         }
-        console.log(this.tableData);
       }, error => {
         console.log(error);
       });
   }
 
   downloadCV() {
-
+    window.open('assets/files/dilara_unbay_ENG_CV.pdf', '_blank');
   }
 
 }
