@@ -135,6 +135,22 @@ h1 {
   }
 }
 
+@media (max-width: 30em) {
+  .right-side {
+    .mat-card-content {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  .right-side {
+    .mat-card-title {
+      font-size: 23px;
+    }
+  }
+}
+
 .framed-image {
   width: 14em;
   height: 14em;
@@ -165,11 +181,21 @@ h1 {
 
 .detail-row {
   width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .detail-column {
   span:last-of-type {
     color: $secondmaincolor;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 30em) {
+  .detail-column {
+    span {
+      font-size: 14px;
+    }
   }
 }
