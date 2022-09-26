@@ -8,6 +8,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   ngx-picture {
     width: 100%;
@@ -21,6 +23,10 @@
 
 .mat-card-subtitle{
   color: $graycolor !important;
+}
+
+.mat-chip-list {
+  margin-right: auto;
 }
 
 .mat-chip{

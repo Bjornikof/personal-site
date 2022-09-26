@@ -1,13 +1,8 @@
 <mat-card class="post-card mat-elevation-z4">
-  <mat-chip-list aria-label="Fish selection">
-    <mat-chip selected>
-      {{tags[0]}}
-    </mat-chip>
-    <mat-chip selected>
-      {{tags[1]}}
-    </mat-chip>
+  <mat-chip-list fxLayoutAlign="flex-start" aria-label="Fish selection">
+    <mat-chip selected *ngFor="let tag of tags">{{tag}}</mat-chip>
   </mat-chip-list>
-  <ngx-picture mat-card-image src="{{src}}" alt="Post Image" [lazyLoad]="false"></ngx-picture>
+  <ngx-picture mat-card-image src="{{src}}" alt="Post Image" [lazyLoad]="true"></ngx-picture>
   <mat-card-header>
     <mat-card-title>{{header}}</mat-card-title>
     <mat-card-subtitle>{{displayText}}</mat-card-subtitle>

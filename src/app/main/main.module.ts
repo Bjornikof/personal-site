@@ -14,11 +14,12 @@ import {MatDividerModule} from "@angular/material/divider";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {FlexModule} from "@angular/flex-layout";
+import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
 import {MatButtonModule} from "@angular/material/button";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatChipsModule} from "@angular/material/chips";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -28,22 +29,24 @@ import {MatChipsModule} from "@angular/material/chips";
     AboutComponent,
     ContactComponent
   ],
-    imports: [
-        CommonModule,
-        CoreModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
-        MatCardModule,
-        MatDividerModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FlexModule,
-        MatButtonModule,
-        FontAwesomeModule,
-        MatSnackBarModule,
-        MatChipsModule
-    ],
+  imports: [
+    CommonModule,
+    CoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    MatCardModule,
+    MatDividerModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexModule,
+    MatButtonModule,
+    FontAwesomeModule,
+    MatSnackBarModule,
+    MatChipsModule,
+    MatGridListModule,
+    FlexLayoutModule
+  ],
   exports: [
     ProjectsComponent
   ]
