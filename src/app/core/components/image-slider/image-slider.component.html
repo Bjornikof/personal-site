@@ -1,5 +1,9 @@
-<ng-image-slider [images]="certificationItems"
-                 [imageSize]="{width: 340, height: 240}"
-                 [lazyLoading]="true"
-                 [slideImage]="1"
+<ng-image-slider [images]="pictureItems"
+                 [imageSize]="this.sizeObject"
+                 [lazyLoading]="this.lazyLoading"
+                 [slideImage]="this.imageSlide"
+                 [showArrow]="this.showArrow"
+                 [infinite]="this.infiniteOption"
+                 [imagePopup]="this.imagePopup"
+                 [autoSlide]="this.autoSlide"
 ></ng-image-slider>

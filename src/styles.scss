@@ -25,6 +25,7 @@ $personal-site-theme: mat.define-light-theme((
 $squada: 'Squada One', serif;
 
 $graycolor: #878E95FF;
+$disabledcolor: #EBEEEF;
 $maincolor: #489DC0FF;
 $secondmaincolor: #19557EFF;
 $skeletoncolor: #24364F;
@@ -66,6 +67,14 @@ span.skeleton-loader.progress-dark.ng-star-inserted {
 
 span.skeleton-loader.pulse.ng-star-inserted {
   background-color: $skeletoncolor !important;
+}
+
+a.mat-focus-indicator.mat-flat-button.mat-button-base.mat-button-disabled {
+  background-color: $disabledcolor !important;
+}
+
+a.mat-focus-indicator.mat-flat-button.mat-button-base:hover {
+  transform: scale(1.05) !important;
 }
 
 body {

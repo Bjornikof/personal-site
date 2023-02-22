@@ -1,0 +1,65 @@
+@import "src/styles";
+
+.post-card {
+  max-width: 30em;
+  height: 35em;
+  min-width: 15em;
+  margin: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+  }
+}
+
+.mat-card-header {
+  color: $maincolor !important;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.mat-card-subtitle {
+  color: $graycolor !important;
+}
+
+.mat-chip-list {
+  margin: 1em;
+}
+
+.mat-chip {
+  background-color: $maincolor !important;
+}
+
+.mat-chip.mat-standard-chip::after {
+  background: none !important;
+}
+
+.mat-flat-button {
+  background-color: $maincolor !important;
+  color: $white !important;
+  display: block;
+  margin: auto;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+
+  a {
+    margin-right: 1em;
+
+    span {
+      margin-left: 0.5em;
+    }
+  }
+}

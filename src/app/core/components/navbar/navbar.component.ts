@@ -23,6 +23,5 @@ export class NavbarComponent implements OnInit {
 
   onClick() {
     this.opened = this.sidenav.opened;
-    console.log(this.opened);
   }
 }

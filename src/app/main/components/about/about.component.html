@@ -21,7 +21,8 @@
           Istanbul. However, I'm greatly in favor of working abroad even if it requires a relocation. I feel like as a
           creative person I have a lot of hobbies to keep me entertained in my spare time. I enjoy playing
           multiplayer games, drawing, painting, going to the theater, trying out food, exploring different cultures,
-          translating subtitles and expanding my anime/manga collection. Feel free to contact me or download my CV to learn more about me.
+          translating subtitles and expanding my anime/manga collection. Feel free to contact me or download my CV to
+          learn more about me.
         </mat-card-content>
         <div class="detail-row" fxLayout="row" fxLayoutAlign="space-around center">
           <div class="detail-column" fxLayout="column" fxLayoutAlign="space-around center">
@@ -54,6 +55,7 @@
 
   <div class="slider">
     <h1>Certifications</h1>
-    <app-image-slider [certificationItems]="tableData"></app-image-slider>
+    <app-image-slider [pictureItems]="tableData" [lazyLoading]="true" [imageSlide]="1"
+                      [sizeObject]="{width: 340, height: 240}"></app-image-slider>
   </div>
 </div>

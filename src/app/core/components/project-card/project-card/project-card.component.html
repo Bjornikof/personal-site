@@ -1,0 +1,28 @@
+<mat-card class="post-card mat-elevation-z4">
+  <mat-card-header>
+    <mat-card-title><h3>{{header}}</h3></mat-card-title>
+  </mat-card-header>
+  <div class="card-image">
+    <app-image-slider [pictureItems]="mediaArray" [lazyLoading]="false" [imageSlide]="1"
+                      [sizeObject]="{width: '99%', height: 240}" [showArrow]="false" [infiniteOption]="true"
+                      [imagePopup]="false" [animationSpeed]="5" [autoSlide]="true"></app-image-slider>
+  </div>
+  <mat-chip-list fxLayoutAlign="flex-start" aria-label="Fish selection">
+    <mat-chip selected *ngFor="let tech of techs">{{tech}}</mat-chip>
+  </mat-chip-list>
+  <mat-card-header>
+    <mat-card-subtitle>{{description}}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="button-div">
+    <a mat-flat-button href="{{githubLink}}" [disabled]="githubLink === ''">
+      <fa-icon [icon]="faGithub"></fa-icon>
+      <span>GITHUB</span>
+    </a>
+    <a mat-flat-button href="{{prodLink}}" [disabled]="prodLink === ''">
+      <fa-icon [icon]="faGlobe"></fa-icon>
+      <span>WEBSITE</span>
+    </a>
+
+  </div>
+</mat-card>
+

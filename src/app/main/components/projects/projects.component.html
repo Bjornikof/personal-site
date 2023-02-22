@@ -1,1 +1,18 @@
-<span>Projects - Under Construction</span>
+<div class="wrapper">
+  <div class="media-container">
+    <div *ngFor="let projectItem of tableData;">
+      <app-project-card [description]="projectItem.description"
+                     [mediaArray]="projectItem.mediaArray"
+                     [header]="projectItem.header"
+                     [prodLink]="projectItem.prodLink"
+                     [githubLink]="projectItem.githubLink"
+                     [techs]="projectItem.techs">
+      </app-project-card>
+    </div>
+  </div>
+  <app-pagination fxFlexOffset="auto"
+                  (nextEvent)="nextPage()"
+                  (prevEvent)="prevPage()"
+                  [pageNumber]="pagination_clicked_count+1">
+  </app-pagination>
+</div>

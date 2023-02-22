@@ -20,6 +20,7 @@ import {ImageSliderComponent} from "./components/image-slider/image-slider.compo
 import {NgImageSliderModule} from "ng-image-slider";
 import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-loader.component';
+import { ProjectCardComponent } from './components/project-card/project-card/project-card.component';
 
 
 @NgModule({
@@ -30,16 +31,18 @@ import { SkeletonLoaderComponent } from './components/skeleton-loader/skeleton-l
     SplashScreenComponent,
     PostCardComponent,
     ImageSliderComponent,
-    SkeletonLoaderComponent
+    SkeletonLoaderComponent,
+    ProjectCardComponent
   ],
-  exports: [
-    NavbarComponent,
-    MediaCardComponent,
-    PaginationComponent,
-    SplashScreenComponent,
-    PostCardComponent,
-    ImageSliderComponent
-  ],
+    exports: [
+        NavbarComponent,
+        MediaCardComponent,
+        PaginationComponent,
+        SplashScreenComponent,
+        PostCardComponent,
+        ImageSliderComponent,
+        ProjectCardComponent
+    ],
   imports: [
     CommonModule,
     RouterModule,
