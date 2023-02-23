@@ -2,7 +2,8 @@
 
 .post-card {
   max-width: 30em;
-  height: 35em;
+  min-height: 40em;
+  max-height: 60em;
   min-width: 15em;
   margin: 1em;
   overflow: hidden;
@@ -10,12 +11,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 
   .card-image {
     width: 100%;
     height: auto;
     object-fit: contain;
-    z-index: 1;
   }
 }
 
