@@ -12,7 +12,7 @@ $personal-site-theme: mat.define-light-theme((
     primary: $personal-site-primary,
     accent: $personal-site-accent,
     warn: $personal-site-warn,
-  )
+  ),
 ));
 
 @include mat.all-component-themes($personal-site-theme);
@@ -39,7 +39,7 @@ $transparentblack: rgba(0, 0, 0, 0.8);
 $transparentgraycolor: rgb(157, 159, 161, 0.5);
 $transparentlightgraycolor: rgba(204, 204, 204, 0.4);
 
-a.next.icons.next-icon.ng-star-inserted, a.prev.icons.prev-icon.ng-star-inserted{
+a.next.icons.next-icon.ng-star-inserted, a.prev.icons.prev-icon.ng-star-inserted {
   background-color: $secondmaincolor;
   color: $white;
   z-index: 0;
@@ -73,8 +73,10 @@ a.mat-focus-indicator.mat-flat-button.mat-button-base.mat-button-disabled {
   background-color: $disabledcolor !important;
 }
 
-a.mat-focus-indicator.mat-flat-button.mat-button-base:hover {
-  transform: scale(1.05) !important;
+a.mat-focus-indicator.mat-flat-button.mat-button-base:hover,
+button.mat-focus-indicator.mat-raised-button.mat-button-base:hover,
+a.mat-focus-indicator.mat-mini-fab.mat-button-base:hover {
+  transform: perspective(1px) scale(1.05);
 }
 
 .ng-image-slider .ng-image-slider-container .main .main-inner .img-div {
