@@ -4,8 +4,9 @@
   </mat-card-header>
   <div class="card-image">
     <app-image-slider [pictureItems]="mediaArray" [lazyLoading]="false" [imageSlide]="1"
-                      [sizeObject]="{width: '99%', height: '26%'}" [showArrow]="false" [infiniteOption]="true"
-                      [imagePopup]="false" [animationSpeed]="5" [autoSlide]="true"></app-image-slider>
+                      [sizeObject]="{width: '99%', height: 'auto'}" [showArrow]="false" [infiniteOption]="true"
+                      [imagePopup]="false" [animationSpeed]="5" [autoSlide]="true"
+                      [manageImageRatio]="true"></app-image-slider>
   </div>
   <mat-chip-list fxLayoutAlign="flex-start" aria-label="Fish selection">
     <mat-chip selected *ngFor="let tech of techs">{{tech}}</mat-chip>

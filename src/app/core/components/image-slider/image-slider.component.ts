@@ -15,6 +15,7 @@ export class ImageSliderComponent implements OnInit {
   @Input() sizeObject: Object = {};
   @Input() showArrow: boolean = true;
   @Input() infiniteOption: boolean = false;
+  @Input() manageImageRatio: boolean = false;
   @Input() animationSpeed: number = 0;
 
   constructor() {
