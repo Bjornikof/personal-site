@@ -37,7 +37,7 @@ export class AboutComponent implements OnInit {
   }
 
   downloadCV() {
-    window.open('assets/files/dilara_unbay_ENG_CV.pdf', '_blank');
+    window.open('assets/files/Dilara_Unbay_ENG_CV.pdf', '_blank');
   }
 
 }
